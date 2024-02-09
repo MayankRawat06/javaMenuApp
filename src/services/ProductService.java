@@ -71,4 +71,10 @@ public class ProductService {
     public void deleteProduct(int productID) {
         products.remove(getProductByID(productID));
     }
+    public static ArrayList<Product> getAllProducts() {
+        return products;
+    }
+    public static void setAllProducts(ArrayList<Product> productsList) {
+        products = productsList;
+    }
 }

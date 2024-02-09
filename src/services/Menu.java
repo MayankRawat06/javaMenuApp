@@ -1,7 +1,10 @@
 package services;
 
 import dto.User;
+import dto.Product;
+import utility.DataSerializationHelper;
 
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.*;
@@ -59,6 +62,7 @@ public class Menu {
             case 4:
                 System.out.println("Thank you and have a nice day.");
                 log.log(Level.INFO, "Program Exited.");
+                DataSerializationHelper.serializeData(ProductService.getAllProducts(), "products.ser");
                 break;
             default:
                 log.log(Level.WARNING, "Invalid Input passed in main menu.");

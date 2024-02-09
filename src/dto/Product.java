@@ -1,7 +1,9 @@
 package dto;
 
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     int productID;
     Category category;
     String description;
